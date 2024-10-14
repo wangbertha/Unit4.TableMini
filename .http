@@ -1,0 +1,17 @@
+@host = http://localhost:3000
+
+### Get all restaurants
+GET {{host}}/restaurants
+
+### Get single restaurant with reservations included
+GET {{host}}/restaurants/2
+
+### Make new reservation to restaurant
+POST {{host}}/restaurants/2/reservations
+Content-Type: application/json
+
+{
+  "name": "Hungry Guest",
+  "email": "super.duper@hungry.com",
+  "partySize": 3
+}
